@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Calculadora.Views.CalculadoraPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+
+        <StackLayout>
+            <VerticalStackLayout
+                Padding="30,0"
+                Spacing="25"
+                VerticalOptions="Center" />
+
+            <Entry
+                x:Name="Num1"
+                Placeholder="Ingrese Numero Uno"
+                Text="{Binding Numero1}"
+                WidthRequest="270" />
+
+            <Entry
+                x:Name="Num2"
+                Placeholder="Ingrese Numero Dos"
+                Text="{Binding Numero2}"
+                WidthRequest="270" />
+
+            <Button
+                x:Name="Sumar"
+                Padding="10,10"
+                Command="{Binding SeleccionarSumarCommand}"
+                Text="Suma" />
+
+            <Button
+                x:Name="Restar"
+                Padding="10,10"
+                Command="{Binding SeleccionarRestaCommand}"
+                Text="Resta" />
+
+            <Button
+                x:Name="Multiplicar"
+                Padding="10,10"
+                Command="{Binding SeleccionarMultiCommand}"
+                Text="Multiplicación" />
+
+            <Button
+                x:Name="Dividir"
+                Padding="10,10"
+                Command="{Binding SeleccionarDivdCommand}"
+                Text="División" />
+
+            <Button
+                x:Name="AddBtn"
+                Padding="10,10"
+                Command="{Binding HacerCalculoCommand}"
+                Text="Calculo" />
+
+            <Entry
+                x:Name="RespuestaEntry"
+                Placeholder="Su Respuesta es"
+                Text="{Binding Resultado}"
+                WidthRequest="270" />
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
